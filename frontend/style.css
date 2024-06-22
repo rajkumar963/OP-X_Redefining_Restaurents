@@ -41,7 +41,7 @@ section:nth-child(even){
 .btn{
     margin-top: 1rem;
     display: inline-block;
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     color: #fff;
     background: var(--black);
     border-radius: .5rem;
@@ -371,7 +371,7 @@ header{
 }
 
 .dishes .box-container .box{
-    padding:2.5rem;
+    padding:2rem;
     background-color: #fff;
     border-radius: .5rem;
     border: .1rem solid rgba(0,0,0,.2);
@@ -415,17 +415,17 @@ header{
 }
 
 .dishes .box-container .box img{
-    height: 24rem;
+    height: 20rem;
     margin:1rem 0;
 
-    &:hover{
+    /* &:hover{
         transform: scale(1.04);
-    }
+    } */
 }
 
 .dishes .box-container .box h3{
     color: var(--black);
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 .dishes .box-container .box .stars{ 
@@ -433,18 +433,244 @@ header{
 }
 
 .dishes .box-container .box .stars i{
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     color: var(--green);
+    cursor: pointer;
 }
 
 .dishes .box-container .box span{
     color: var(--green);
     font-weight: bolder;
     margin-right: 1rem;
+    font-size: 2rem;
+}
+
+.dishes .box-container .box img{
+    height: 22rem;
+    width: 100%;
+}
+
+.btn1{
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.6rem;
+    color: #fff;
+    background: var(--black);
+    border-radius: .5rem;
+    cursor: pointer;
+    padding: .8rem 2.4rem;
+
+    &:hover{
+        background: var(--green);
+        letter-spacing: .1rem;
+    }
+}
+
+/***************About*********************/
+
+.about .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    align-items: center;
+}
+
+.image1 img{
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 20px;
+    /* border-radius: 50%; */
+    border: 5px solid #fff;
+    box-shadow: 2px 5px 10px rgba(0,0,0,.1);
+    cursor: pointer;
+    transition: .2s linear;
+    object-position: center;
+
+    &:hover{
+        transform: scale(1.05);
+    }
+}
+
+.about .row .image{
+    flex:1 1 45rem;
+}
+.about .row .image img{
+    width: 60%;
+}
+.about .row .content{
+    flex:1 1 45rem;
+}
+
+.about .row .content h3{
+    color: var(--black);
+    /* text-align: center; */
+    font-size: 4rem;
+    padding: .5rem 0;
+}
+.about .row .content p{
+    color: var(--light-color);
+     font-size: 1.5rem;
+    padding: .5rem 0;
+    line-height: 1.5;
+}
+.about .row .content .icons-container{
+    display: flex;
+    gap:1rem;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+    margin-top: .5rem;
+}
+.about .row .content .icons-container .icons{
+    background-color: #eee;
+    border-radius: .5rem;
+    border: .1rem solid rgba(0,0,0,.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:1rem;
+    flex:1 1 17rem;
+    padding:1rem 0.6rem;
+    cursor: pointer;
+}
+
+.about .row .content .icons-container .icons i{
+    font-size: 2.5rem;
+    color:var(--green);
+    background-color: #eee;
+}
+.about .row .content .icons-container .icons span{
+    font-size: 1.5rem;
+    color:var(--black);
+    background-color: #eee;
+}
+
+/***************Menu section*********************/
+
+.menu .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:1.5rem;
+}
+.menu .box-container .box {
+    background-color: #fff;
+    border: .1rem solid rgba(0,0,0,.2);
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    padding: 1rem;
+}
+
+.menu .box-container .box .image{
+    height: 25rem;
+    width: 100%;
+    padding: 1.5rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.menu .box-container .box .image img{
+    height: 100%;
+    width: 100%;
+    border-radius: .5rem;
+    object-fit: cover;
+}
+
+.menu .box-container .box .image .fa-heart{
+    position: absolute;
+    top: 2.5rem; right: 2.5rem;
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+    text-align: center;
+    font-size: 1.8rem;
+    background-color: #fff;
+    border-radius: 50%;
+    color: var(--black);
+}
+
+.menu .box-container .box .image .fa-heart:hover{
+    background-color: var(--green);
+    color: #ea0707;
+}
+
+.menu .box-container .box .content{
+    padding: 1rem;
+    padding-top: 0;
+}
+
+.menu .box-container .box .content .stars{
+    padding-bottom: 1rem;
+}
+.menu .box-container .box .content .stars i{
+    font-size: 1.7rem;
+    color: var(--green);
+}
+
+.menu .box-container .box .content h3{
+    color: var(--black);
     font-size: 2.5rem;
 }
 
-/* .dishes .box-container .box img{
-    height: auto;
-    width: 100%;
-} */
+.menu .box-container .box .content p{
+    color: var(--light-color);
+    font-size: 1.6rem;
+    padding: .5rem 0;
+    line-height: 1.5;
+}
+
+.menu .box-container .box .content span{
+    color: var(--green);
+    font-size: 2rem;
+    font-weight: bolder;
+    margin-right: 1rem;
+}
+
+/***************review section*********************/
+
+
+.review .slide{
+    padding: 2rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    border: .1rem solid rgba(0,0,0,.2);
+    border-radius: .5rem;
+    position: relative;
+   
+}
+
+.review .slide .fa-quote-right{
+    position: absolute;
+    top: 2rem; right: 2rem;
+    font-size: 6rem;
+    color: #ccc;
+}
+
+.review .slide .user{
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    padding-bottom: 1.5rem;
+}
+
+.review .slide .user img{
+    height: 8rem;
+    width: 8rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.review .slide .user h3{
+    color: var(--black);
+    font-size: 2rem;
+    padding-bottom: .5rem;
+}
+
+.review .slide .user i{
+    font-size: 1.3rem;
+    color: var(--green);
+}
+
+.review .slide p{
+    font-size: 1.5rem;
+    line-height: 1.3;
+    color: var(--light-color);
+}
