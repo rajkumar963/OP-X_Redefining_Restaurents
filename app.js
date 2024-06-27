@@ -6,7 +6,21 @@ menu.onclick=()=>{
     navbar.classList.toggle('active');
 }
 
+let section=document.querySelectorAll('section');
+let navebarLinks=document.querySelectorAll('header .navbar a');
 window.onscroll=()=>{
+    section.forEach(sec=>{
+        let top=window.scrollY;
+        let offset=sec.offsetTop-150;
+        let height=sec.offsetHeight;
+        let id=sec.getAttribute('id');
+        if(top>=offset && top<offset+height){
+            navebarLinks.forEach(links=>{
+                links.classList.remove('active');
+                document.querySelector('header .navbar a[href*='+id+']').classList.add('active');
+            })
+        }
+    })
     menu.classList.remove('fa-times');
     navbar.classList.remove('active');
 }
